@@ -10,13 +10,13 @@ class Team
     self.drow = drow
   end
   
-  # 勝ち数 / (勝ち数 + 負け数) の答えを calc_win_rate に代入(戻り値)
+  # 勝ち数 / (勝ち数 + 負け数) の値を calc_win_rate に代入(戻り値)
   def calc_win_rate
-    rate = self.win.to_f / (self.win.to_f + self.lose.to_f)
+    self.win.to_f / (self.win.to_f + self.lose.to_f)
   end
   
   def show_team_result
-    puts "#{self.name} の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.drow}分、 勝率は#{calc_win_rate} です。"
+    puts "#{self.name} の2020年の成績は #{self.win}勝 #{self.lose}敗 #{self.drow}分、勝率は #{calc_win_rate} です。"
   end
 end
 
@@ -30,6 +30,7 @@ Carp = Team.new("Carp", 52, 56, 12)
 Swallows = Team.new("Swallows", 41, 69, 10)
 
 # インスタンスの実行
+# インスタンス名.メソッド名
 Giants.show_team_result
 Tigers.show_team_result
 Dragons.show_team_result
