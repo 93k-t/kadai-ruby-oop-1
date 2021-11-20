@@ -10,7 +10,7 @@ class Team
     self.drow = drow
   end
   
-  # 勝ち数 / (勝ち数 + 負け数) の答えを calc_win_rate に代入
+  # 勝ち数 / (勝ち数 + 負け数) の答えを calc_win_rate に代入(戻り値)
   def calc_win_rate
     rate = self.win.to_f / (self.win.to_f + self.lose.to_f)
   end
@@ -21,6 +21,7 @@ class Team
 end
 
 # インスタンスの生成
+# インスタンス名 = クラス名.new(引数)
 Giants = Team.new("Giants", 67, 45, 8)
 Tigers = Team.new("Tigers", 60, 53, 7)
 Dragons = Team.new("Dragons", 60, 55, 5)
